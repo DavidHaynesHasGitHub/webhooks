@@ -1,6 +1,5 @@
 version: 0.2
 
-
 phases:
   install:
     commands:
@@ -27,7 +26,7 @@ phases:
       - rake Build 
     finally:
       - echo WebPage Directory Built
-  artifacts:
-    type: zip
-    files:
-      - '**/*'
+artifacts:
+  type: zip
+  files:
+    - '**/*'
