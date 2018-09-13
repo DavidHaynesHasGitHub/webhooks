@@ -1,76 +1,1375 @@
-<!DOCTYPE html>
-<html lang="en">
 
-<head>
+<!doctype html>
+<html>
+  <head>
     <meta charset="utf-8">
-    <title>Example app</title>
-    <meta name="description" content="" />
-    <link href="css/styles.css" rel="stylesheet">
-    <link href="css/gradients.css" rel="stylesheet">
-</head>
+    <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+    <link rel="shortcut icon" href="images/favicon.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>Zaui Web-Hook and Remote Target API</title>
 
-<body class="">
-    <div class="wrapper">
-        <div class="graphics">
-            <div class="tower">
-                <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-                     viewBox="-11 170 1000 429" enable-background="new -11 170 1000 429" xml:space="preserve">
-                    <path class="path" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-miterlimit="10" d="M989,595H712v-35c0,0,4.5-1.8,8-3
-                                                                                                  c5.2-1.8,12.5,5.3,22-4c3.4-3.4-0.9-7.8-0.4-10.1c0.7-3.1,4.4-6.8,1.6-11.4c-2.6-4.2-6.9-3.6-8.2-5.5c-1.7-2.3-2.2-6.3-7-9
-                                                                                                  c-5.6-3.1-9.9,0.2-13-1c-2.5-0.9-2.3-5-9-5c-4.8,0-7.2,4.8-10,5c-2.3,0.2-4.9-4.5-10-2c-5.5,2.8-4,7.3-6,9c-1.4,1.2-3.1,3.2-6,4.2
-                                                                                                  c-2.6,0.9-4.9,3-4,8.8c0.6,3.7,6.8,4.1,7.5,6c1,2.9-6.4,6.2-2.5,12c3,4.5,9,1.6,12,1c1.9-0.4,7.1-0.7,8,0c3.4,2.5,9,5,9,5v35
-                                                                                                  l-506-1.5L182.3,444l0.3-0.8v-69.6l-0.2-0.2l12.3-72.3c10.9-2.6,16.5-6.5,16.5-6.5l-5.2-2.9l1.1-5.8l15-3.3l-10.1-3.9l1.2-4.6
-                                                                                                  c-15.8-8.3-32.2-11-32.2-11v-3.6l4.1-6.5h-4.9v-4.4h-8.3V244h-1.2l-1.7-31.2l-1-1.3l-1,1.3l-1.7,31.2h-1.2v4.8h-8.3v4.4h-4.9
-                                                                                                  l4.1,6.5v3.6c0,0-16.5,2.7-32.2,11l1.2,4.6l-10.1,3.9l15,3.3l1.1,5.8l-5.1,2.9c0,0,5.5,3.9,16.4,6.5l12.3,72.4l-0.1,0.1v69.6
-                                                                                                  l0.3,0.8l-14.6,149.4h-1.2H-11"/>
-                    <path class="path" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-miterlimit="10" d="M8,393.7c0-13.5,12.1-10.8,15.6-14.7
-                                                                                                  c2.8-3.2-1-8.8,9-13.9c7.9-4.1,9.7,1,13.1,0.8c4.5-0.3,3.3-6.7,14.7-6.6c12.7,0.2,11.2,8.4,14.7,10.6c3,1.9,7.9-2.1,13.9,4.1
-                                                                                                  c3.8,4,1.3,7.4,2.5,9.8c2.2,4.4,14.7,0.9,14.7,13.9c0,12.2-13.5,8.3-17.2,10.6c-3.6,2.3-4.4,9.3-13.1,11.5c-8,2-9.5-4-13.9-4.1
-                                                                                                  c-5-0.1-5.5,8.6-18.8,6.6c-12.3-1.9-12.3-9.1-16.4-12.3C21.9,406.3,8,408.6,8,393.7z"/>
-                    <path class="path" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-miterlimit="10" d="M325.1,313.9c-3.9,3-3.9,10-15.7,11.8
-                                                                                                  c-12.8,2-13.3-6.4-18-6.3c-4.3,0.1-5.7,5.8-13.3,3.9c-8.4-2.1-9.1-8.8-12.5-11c-3.6-2.3-16.5,1.5-16.5-10.2c0-12.4,12-9.1,14.1-13.3
-                                                                                                  c1.1-2.3-1.3-5.6,2.4-9.4c5.8-6,10.4-2.1,13.3-3.9c3.4-2.1,2-10,14.1-10.2c11-0.2,9.9,6,14.1,6.3c3.3,0.2,5-4.7,12.5-0.8
-                                                                                                  c9.6,4.9,6,10.3,8.6,13.3c3.3,3.7,14.9,1.2,14.9,14.1C343.1,312.5,329.8,310.3,325.1,313.9z"/>
-                    <path class="path" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-miterlimit="10" d="M18.4,229.5c0-13.5,12.1-10.8,15.6-14.7
-                                                                                                  c2.8-3.2-1-8.8,9-13.9c7.9-4.1,9.7,1,13.1,0.8c4.5-0.3,3.3-6.7,14.7-6.6c12.7,0.2,11.2,8.4,14.7,10.6c3,1.9,7.9-2.1,13.9,4.1
-                                                                                                  c3.8,4,1.3,7.4,2.5,9.8c2.2,4.4,14.7,0.9,14.7,13.9c0,12.2-13.5,8.3-17.2,10.6c-3.6,2.3-4.4,9.3-13.1,11.5c-8,2-9.5-4-13.9-4.1
-                                                                                                  c-5-0.1-5.5,8.6-18.8,6.6c-12.3-1.9-12.3-9.1-16.4-12.3C32.2,242.1,18.4,244.4,18.4,229.5z"/>
-                    <path class="path" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-miterlimit="10" d="M215.8,398.8c0-13.5,12.1-10.8,15.6-14.7
-                                                                                                  c2.8-3.2-1-8.8,9-13.9c7.9-4.1,9.7,1,13.1,0.8c4.5-0.3,3.3-6.7,14.7-6.6c12.7,0.2,11.2,8.4,14.7,10.6c3,1.9,7.9-2.1,13.9,4.1
-                                                                                                  c3.8,4,1.3,7.4,2.5,9.8c2.2,4.4,14.7,0.9,14.7,13.9c0,12.2-13.5,8.3-17.2,10.6c-3.6,2.3-4.4,9.3-13.1,11.5c-8,2-9.5-4-13.9-4.1
-                                                                                                  c-5-0.1-5.5,8.6-18.8,6.6c-12.3-1.9-12.3-9.1-16.4-12.3C229.7,411.3,215.8,413.6,215.8,398.8z"/>
-                </svg>
+    <style>
+      .highlight table td { padding: 5px; }
+.highlight table pre { margin: 0; }
+.highlight .gh {
+  color: #999999;
+}
+.highlight .sr {
+  color: #f6aa11;
+}
+.highlight .go {
+  color: #888888;
+}
+.highlight .gp {
+  color: #555555;
+}
+.highlight .gs {
+}
+.highlight .gu {
+  color: #aaaaaa;
+}
+.highlight .nb {
+  color: #f6aa11;
+}
+.highlight .cm {
+  color: #75715e;
+}
+.highlight .cp {
+  color: #75715e;
+}
+.highlight .c1 {
+  color: #75715e;
+}
+.highlight .cs {
+  color: #75715e;
+}
+.highlight .c, .highlight .cd {
+  color: #75715e;
+}
+.highlight .err {
+  color: #960050;
+}
+.highlight .gr {
+  color: #960050;
+}
+.highlight .gt {
+  color: #960050;
+}
+.highlight .gd {
+  color: #49483e;
+}
+.highlight .gi {
+  color: #49483e;
+}
+.highlight .ge {
+  color: #49483e;
+}
+.highlight .kc {
+  color: #66d9ef;
+}
+.highlight .kd {
+  color: #66d9ef;
+}
+.highlight .kr {
+  color: #66d9ef;
+}
+.highlight .no {
+  color: #66d9ef;
+}
+.highlight .kt {
+  color: #66d9ef;
+}
+.highlight .mf {
+  color: #ae81ff;
+}
+.highlight .mh {
+  color: #ae81ff;
+}
+.highlight .il {
+  color: #ae81ff;
+}
+.highlight .mi {
+  color: #ae81ff;
+}
+.highlight .mo {
+  color: #ae81ff;
+}
+.highlight .m, .highlight .mb, .highlight .mx {
+  color: #ae81ff;
+}
+.highlight .sc {
+  color: #ae81ff;
+}
+.highlight .se {
+  color: #ae81ff;
+}
+.highlight .ss {
+  color: #ae81ff;
+}
+.highlight .sd {
+  color: #e6db74;
+}
+.highlight .s2 {
+  color: #e6db74;
+}
+.highlight .sb {
+  color: #e6db74;
+}
+.highlight .sh {
+  color: #e6db74;
+}
+.highlight .si {
+  color: #e6db74;
+}
+.highlight .sx {
+  color: #e6db74;
+}
+.highlight .s1 {
+  color: #e6db74;
+}
+.highlight .s {
+  color: #e6db74;
+}
+.highlight .na {
+  color: #a6e22e;
+}
+.highlight .nc {
+  color: #a6e22e;
+}
+.highlight .nd {
+  color: #a6e22e;
+}
+.highlight .ne {
+  color: #a6e22e;
+}
+.highlight .nf {
+  color: #a6e22e;
+}
+.highlight .vc {
+  color: #ffffff;
+}
+.highlight .nn {
+  color: #ffffff;
+}
+.highlight .nl {
+  color: #ffffff;
+}
+.highlight .ni {
+  color: #ffffff;
+}
+.highlight .bp {
+  color: #ffffff;
+}
+.highlight .vg {
+  color: #ffffff;
+}
+.highlight .vi {
+  color: #ffffff;
+}
+.highlight .nv {
+  color: #ffffff;
+}
+.highlight .w {
+  color: #ffffff;
+}
+.highlight {
+  color: #ffffff;
+}
+.highlight .n, .highlight .py, .highlight .nx {
+  color: #ffffff;
+}
+.highlight .ow {
+  color: #f92672;
+}
+.highlight .nt {
+  color: #f92672;
+}
+.highlight .k, .highlight .kv {
+  color: #f92672;
+}
+.highlight .kn {
+  color: #f92672;
+}
+.highlight .kp {
+  color: #f92672;
+}
+.highlight .o {
+  color: #f92672;
+}
+    </style>
+    <link href="stylesheets/screen.css" rel="stylesheet" media="screen" />
+    <link href="stylesheets/print.css" rel="stylesheet" media="print" />
+      <script src="javascripts/all.js"></script>
+  </head>
 
-            </div>
+  <body class="index" data-languages="[&quot;json&quot;]">
+    <a href="#" id="nav-button">
+      <span>
+        NAV
+        <img src="images/navbar.png" alt="Navbar" />
+      </span>
+    </a>
+    <div class="toc-wrapper">
+      <img src="images/logo.svg" class="logo" alt="Logo" />
+        <div class="lang-selector">
+              <a href="#" data-language-name="json">json</a>
         </div>
-
-        <header>
-            <nav class="website-nav">
-                <ul>
-                    <li><a class="home-link" href="https://aws.amazon.com/">Home</a></li>
-                    <li><a href="https://aws.amazon.com/what-is-cloud-computing/">About</a></li>
-                    <li><a href="https://aws.amazon.com/solutions/">Services</a></li>
-                    <li><a href="https://aws.amazon.com/contact-us/">Contact</a></li>
-                </ul>
-            </nav>
-        </header>
-
-        <div class="message">
-            <a class="twitter-link" href="http://twitter.com/home/?status=I%20created%20a%20project%20with%20AWS%20CodeStar!%20%23AWS%20%23AWSCodeStar%20https%3A%2F%2Faws.amazon.com%2Fcodestar"><img src="img/tweet.svg" /></a>
-            <div class="text">
-                <h1>Congratulations!</h1>
-                <h2>You just created an HTML5 web application</h2>
-            </div>
+        <div class="search">
+          <input type="text" class="search" id="input-search" placeholder="Search">
         </div>
+        <ul class="search-results"></ul>
+      <ul id="toc" class="toc-list-h1">
+          <li>
+            <a href="#zaui-web-hook-and-remote-target-api" class="toc-h1 toc-link" data-title="zaui-web-hook-and-remote-target-api">Zaui Web-Hook and Remote Target API</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#preface" class="toc-h2 toc-link" data-title="preface">Preface</a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#web-hooks-overview" class="toc-h1 toc-link" data-title="web-hooks-overview">Web-Hooks Overview</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#what-is-a-web-hook" class="toc-h2 toc-link" data-title="what-is-a-web-hook">What is a Web-Hook?</a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#web-hook-setup" class="toc-h1 toc-link" data-title="web-hook-setup">Web-Hook Setup</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#initial-setup" class="toc-h2 toc-link" data-title="initial-setup">Initial Setup</a>
+                  </li>
+                  <li>
+                    <a href="#trigger-event-in-zaui" class="toc-h2 toc-link" data-title="trigger-event-in-zaui">Trigger Event in Zaui</a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#debugging-web-hooks" class="toc-h1 toc-link" data-title="debugging-web-hooks">Debugging Web-Hooks</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#tools" class="toc-h2 toc-link" data-title="tools">Tools</a>
+                  </li>
+                  <li>
+                    <a href="#debugging-zaui-web-hooks-using-requestbin" class="toc-h2 toc-link" data-title="debugging-zaui-web-hooks-using-requestbin">Debugging Zaui Web-Hooks Using RequestBin</a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#caveats-and-notes-to-web-hooks" class="toc-h1 toc-link" data-title="caveats-and-notes-to-web-hooks">Caveats and Notes to Web-Hooks</a>
+          </li>
+          <li>
+            <a href="#remote-targets-and-web-hooks" class="toc-h1 toc-link" data-title="remote-targets-and-web-hooks">Remote Targets and Web-Hooks</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#what-is-a-web-hook-2" class="toc-h2 toc-link" data-title="what-is-a-web-hook">What is a Web-Hook</a>
+                  </li>
+                  <li>
+                    <a href="#why-a-web-hook" class="toc-h2 toc-link" data-title="why-a-web-hook">Why a Web-Hook</a>
+                  </li>
+                  <li>
+                    <a href="#data-formats" class="toc-h2 toc-link" data-title="data-formats">Data Formats</a>
+                  </li>
+                  <li>
+                    <a href="#when-is-data-delivered" class="toc-h2 toc-link" data-title="when-is-data-delivered">When is Data Delivered</a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#event-payloads" class="toc-h1 toc-link" data-title="event-payloads">Event Payloads</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#event-notification-payload" class="toc-h2 toc-link" data-title="event-notification-payload">Event Notification Payload</a>
+                  </li>
+                  <li>
+                    <a href="#booking-data-payload" class="toc-h2 toc-link" data-title="booking-data-payload">Booking Data Payload</a>
+                  </li>
+                  <li>
+                    <a href="#customer-data-payload" class="toc-h2 toc-link" data-title="customer-data-payload">Customer Data Payload</a>
+                  </li>
+                  <li>
+                    <a href="#account-data-payload" class="toc-h2 toc-link" data-title="account-data-payload">Account Data Payload</a>
+                  </li>
+                  <li>
+                    <a href="#contact-data-payload" class="toc-h2 toc-link" data-title="contact-data-payload">Contact Data Payload</a>
+                  </li>
+                  <li>
+                    <a href="#employee-data-payload" class="toc-h2 toc-link" data-title="employee-data-payload">Employee Data Payload</a>
+                  </li>
+                  <li>
+                    <a href="#guest-check-in-data-payload" class="toc-h2 toc-link" data-title="guest-check-in-data-payload">Guest Check-In Data Payload</a>
+                  </li>
+                  <li>
+                    <a href="#package-data-payload" class="toc-h2 toc-link" data-title="package-data-payload">Package Data Payload</a>
+                  </li>
+                  <li>
+                    <a href="#activity-data-payload" class="toc-h2 toc-link" data-title="activity-data-payload">Activity Data Payload</a>
+                  </li>
+                  <li>
+                    <a href="#product-data-payload" class="toc-h2 toc-link" data-title="product-data-payload">Product Data Payload</a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#event-notification-groups-and-types" class="toc-h1 toc-link" data-title="event-notification-groups-and-types">Event Notification Groups and Types</a>
+          </li>
+          <li>
+            <a href="#legal" class="toc-h1 toc-link" data-title="legal">Legal</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#acceptance-of-terms" class="toc-h2 toc-link" data-title="acceptance-of-terms">Acceptance of Terms</a>
+                  </li>
+                  <li>
+                    <a href="#permitted-use" class="toc-h2 toc-link" data-title="permitted-use">Permitted Use</a>
+                  </li>
+                  <li>
+                    <a href="#restrictions" class="toc-h2 toc-link" data-title="restrictions">Restrictions</a>
+                  </li>
+                  <li>
+                    <a href="#rate-limits-and-monitoring" class="toc-h2 toc-link" data-title="rate-limits-and-monitoring">Rate Limits and Monitoring</a>
+                  </li>
+                  <li>
+                    <a href="#ownership-trademarks" class="toc-h2 toc-link" data-title="ownership-trademarks">Ownership/Trademarks</a>
+                  </li>
+                  <li>
+                    <a href="#privacy-policy" class="toc-h2 toc-link" data-title="privacy-policy">Privacy Policy</a>
+                  </li>
+                  <li>
+                    <a href="#limitation-of-liability" class="toc-h2 toc-link" data-title="limitation-of-liability">Limitation of Liability</a>
+                  </li>
+                  <li>
+                    <a href="#unauthorized-use-no-interference" class="toc-h2 toc-link" data-title="unauthorized-use-no-interference">Unauthorized Use/No Interference</a>
+                  </li>
+                  <li>
+                    <a href="#indemnification" class="toc-h2 toc-link" data-title="indemnification">Indemnification</a>
+                  </li>
+                  <li>
+                    <a href="#termination" class="toc-h2 toc-link" data-title="termination">Termination</a>
+                  </li>
+                  <li>
+                    <a href="#accuracy-of-information" class="toc-h2 toc-link" data-title="accuracy-of-information">Accuracy of Information</a>
+                  </li>
+                  <li>
+                    <a href="#transmission-failures" class="toc-h2 toc-link" data-title="transmission-failures">Transmission Failures</a>
+                  </li>
+                  <li>
+                    <a href="#limitation-of-liability-2" class="toc-h2 toc-link" data-title="limitation-of-liability">Limitation of Liability</a>
+                  </li>
+                  <li>
+                    <a href="#governing-law-jurisdiction" class="toc-h2 toc-link" data-title="governing-law-jurisdiction">Governing law/Jurisdiction</a>
+                  </li>
+                  <li>
+                    <a href="#entire-agreement" class="toc-h2 toc-link" data-title="entire-agreement">Entire Agreement</a>
+                  </li>
+              </ul>
+          </li>
+      </ul>
+        <ul class="toc-footer">
+            <li><a href='https://api.zaui.io/signup'>Sign Up for a Developer Key</a></li>
+            <li><a href='https://davidhayneshasgithub.github.io/ZauiWebApi/'>See our Web API Documentation</a></li>
+            <li><a href='https://davidhayneshasgithub.github.io/ZauiIOAPI'>See our IO API Documentation</a></li>
+        </ul>
     </div>
+    <div class="page-wrapper">
+      <div class="dark-box"></div>
+      <div class="content">
+        <h1 id='zaui-web-hook-and-remote-target-api'>Zaui Web-Hook and Remote Target API</h1><h2 id='preface'>Preface</h2>
+<p>The typical user of this manual is a power user of Zaui Software who wishes to have real-time access to data as it is created, edited or removed from the system.</p>
+<h1 id='web-hooks-overview'>Web-Hooks Overview</h1><h2 id='what-is-a-web-hook'>What is a Web-Hook?</h2>
+<p>Web-hooks are an easy way to push notifications from Zaui to any remote system you wish. Web-hooks are triggered from within workflows in Zaui, to deliver data to a remote system. A web-hook is like and inverted API endpoint. Instead of making a call to our API, you define a callback URL (endpoint) to which we will HTTP POST information when events occur in Zaui. Your callback URL can then execute code based on the POST data.</p>
 
-    <footer>
-        <p class="footer-contents">Designed and developed with
-            <a href="https://aws.amazon.com/careers/devtools-jobs/">♥</a> in Seattle.
-        </p>
-    </footer>
+<p>You can think of it as defining an API endpoint for your application that will receive output from Zaui, when events occur within Zaui.</p>
 
-    <script src="js/set-background.js"></script>
-</body>
+<p>Examples of triggers could be when a booking is created or edited or when a customer record is create or amended. These events would then deliver the changed data to your endpoint, where your code could do something with that such as update your external CRM system.</p>
+<h1 id='web-hook-setup'>Web-Hook Setup</h1><h2 id='initial-setup'>Initial Setup</h2>
+<ol>
+<li>Log into your Zaui system</li>
+<li>On the menu system go to Settings-&gt;Manage Notifications-&gt;Web-Hooks (Remote Targets)</li>
+<li>Create your new web-hook, for example &quot;On Booking Creation&quot;. For the &quot;Remote Target URL&quot;, put in the Bin URL, that you obtain from the RequestBin setup.</li>
+</ol>
+<h2 id='trigger-event-in-zaui'>Trigger Event in Zaui</h2>
+<ol>
+<li>Trigger the event in Zaui (such as a new booking).</li>
+<li>Refresh the RequestBin browser window, and your request data payload from Zaui will appear</li>
+</ol>
+<h1 id='debugging-web-hooks'>Debugging Web-Hooks</h1>
+<p>If you need to see what kind of response you’re going to get from our web-hooks, or you need to tunnel directly to your development environment, there is a selection of tools out there to help you. Here is a short list of some great tools on the market, but we will only go into detail with RequestBin.</p>
+<h2 id='tools'>Tools</h2>
+<ol>
+<li>RequestBin – simple tool for insight into web-hook data payloads in real-time. Its Free!</li>
+<li><a href="https://ngrok.com/" target="_blank"_>Ngrok</a> – tool for creating a local tunnel into your machine, it makes testing web-hooks locally very easy.</li>
+<li><a href="https://www.runscope.com/" target="_blank"_>Runscope</a> – a tool for debugging API’s. It acts a proxy, collecting all data sent to it and passes it on to another point.</li>
+</ol>
+<h2 id='debugging-zaui-web-hooks-using-requestbin'>Debugging Zaui Web-Hooks Using RequestBin</h2><h3 id='requestbin-setup'>RequestBin Setup</h3>
+<ol>
+<li>In your browser, go to <a href="https://requestb.in" target="_blank"_>RequestBin</a></li>
+<li>Click on &quot;Create a RequestBin&quot;</li>
+<li>You will be given a &quot;Bin URL&quot;. This URL will be used as the configured endpoint in setting up the endpoint URL in Zaui.</li>
+</ol>
 
+<p><strong>NOTE</strong> <em>do not close this browser window, RequestBin requires this session to capture the inbound data requests.</em></p>
+<h1 id='caveats-and-notes-to-web-hooks'>Caveats and Notes to Web-Hooks</h1>
+<ol>
+<li><p>Your servers need to be robust enough to handle a large number of requests from Zaui web-hooks, especially if you have configured many web-hooks that cascade from event to event.</p></li>
+<li><p>Sending data from Zaui to your endpoint can be a blocking call in our system, and can result in up to a 2 sec delay. Our systems will abandon the call after 2 seconds, and will no wait for return data coming back from your servers. If your using multiple web-hooks, for example, to be trigger at the time of making a new booking, the time required to process the booking will be delayed up to 2 secs for each web-hook.</p></li>
+</ol>
+<h1 id='remote-targets-and-web-hooks'>Remote Targets and Web-Hooks</h1>
+<p>We’ll get to what each of these mean in a moment, but in general there are 2 parts to delivery of real-time data from your system:
+<br>
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1. A remote target. This is where you wish to have the data sent, when an event occurs in Zaui
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2. A web-hook that is triggered when an event happens determines what data to be sent when &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;the event occurs in Zaui</p>
+<h2 id='what-is-a-web-hook-2'>What is a Web-Hook</h2>
+<p>A web-hook can be thought of as a <strong>&quot;Simplified API&quot;</strong>. So even if you’re not a programmer, the concept of using a web-hook will be easy to understand. You will likely need a program, however, to work with the data that a web-hook delivers. Web-hooks are a server to server connection method.
+<br>
+<br>
+Since, this is a server to server method of data delivery, the server that your sending data, must be capable of:
+<br>
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;• Receiving POST data
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;• Must be a web-server
+<br>
+<br>
+In the simplest form:
+<br>
+<br>
+<strong><em>&quot;A web-hook is a method of notification when something has changed in your Zaui system. Notifications based on events that occur, and allows sending data, one-way, to a URL of your choice, upon that event&quot;</em></strong></p>
+<h2 id='why-a-web-hook'>Why a Web-Hook</h2>
+<p>A web-hook allows you the following:
+<br>
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;• Allows you to collect information about events as they happen in real-time, when data changes in &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Zaui
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;• Notify any system, capable to receiving data, via a web POST
+<br>
+<br>
+Web-hooks are simple way of receiving data in real-time. You can create and manage different web-hooks from within Zaui, shuttle data to your URL. It’s that simple!</p>
+<h2 id='data-formats'>Data Formats</h2>
+<p>Zaui supports both <strong>JSON</strong> and <strong>XML</strong> formats.</p>
+<h2 id='when-is-data-delivered'>When is Data Delivered</h2>
+<p>Each web-hook can be configured to deliver data to an URL of your choice. Web-hooks are event driven. Zaui handles the following events:</p>
+
+<table><thead>
+<tr>
+<th>Event</th>
+<th>Triggered</th>
+<th>Description</th>
+<th>Data Payload</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Bookings</td>
+<td>Creation</td>
+<td>There are various channels that allow booking creation, including the back office, online, and the API</td>
+<td>Booking Data</td>
+</tr>
+<tr>
+<td>Bookings</td>
+<td>Amendment</td>
+<td>Anytime the booking is changed, we will notify your URL</td>
+<td>Booking Data</td>
+</tr>
+<tr>
+<td>Bookings</td>
+<td>Cancellation</td>
+<td>Anytime the booking is cancelled, we will notify your URL</td>
+<td>Booking Data</td>
+</tr>
+<tr>
+<td>Customers</td>
+<td>Creation</td>
+<td>When a new customer is created</td>
+<td>Customer Data</td>
+</tr>
+<tr>
+<td>Customers</td>
+<td>Amendment</td>
+<td>When an existing customer is changed</td>
+<td>Customer Data</td>
+</tr>
+<tr>
+<td>Customers</td>
+<td>Removal</td>
+<td>When an existing customer is removed</td>
+<td>Customer Data</td>
+</tr>
+<tr>
+<td>Accounts</td>
+<td>Creation</td>
+<td>Anytime a new account is created</td>
+<td>Account Data</td>
+</tr>
+<tr>
+<td>Accounts</td>
+<td>Amendment</td>
+<td>When an existing account is changed</td>
+<td>Account Data</td>
+</tr>
+<tr>
+<td>Accounts</td>
+<td>Removal</td>
+<td>When an existing account is removed</td>
+<td>Account Data</td>
+</tr>
+<tr>
+<td>Contacts</td>
+<td>Creation</td>
+<td>Anytime a new contact in an account is created</td>
+<td>Contact Data</td>
+</tr>
+<tr>
+<td>Contacts</td>
+<td>Amendment</td>
+<td>When an existing contact is changed</td>
+<td>Contact Data</td>
+</tr>
+<tr>
+<td>Contacts</td>
+<td>Removal</td>
+<td>When an existing contact is removed</td>
+<td>Contact Data</td>
+</tr>
+<tr>
+<td>Employees</td>
+<td>Creation</td>
+<td>Anytime a new employee is created</td>
+<td>Employee Data</td>
+</tr>
+<tr>
+<td>Employees</td>
+<td>Amendment</td>
+<td>When an existing employee is changed</td>
+<td>Employee Data</td>
+</tr>
+<tr>
+<td>Employees</td>
+<td>Removal</td>
+<td>When an existing employee is removed</td>
+<td>Employee Data</td>
+</tr>
+<tr>
+<td>Guest Check-In</td>
+<td>On Checkin</td>
+<td>Any ticket scan event, or check-in event</td>
+<td>Check-In Data</td>
+</tr>
+<tr>
+<td>Package</td>
+<td>Creation</td>
+<td>When a new package is created</td>
+<td>Package Data</td>
+</tr>
+<tr>
+<td>Package</td>
+<td>Amendment</td>
+<td>When a package is changed</td>
+<td>Package Data</td>
+</tr>
+<tr>
+<td>Package</td>
+<td>Remove</td>
+<td>When a package is removed</td>
+<td>Package Data</td>
+</tr>
+<tr>
+<td>Activity</td>
+<td>Creation</td>
+<td>When a new activity is created</td>
+<td>Activity Data</td>
+</tr>
+<tr>
+<td>Activity</td>
+<td>Amendment</td>
+<td>When an activity is changed</td>
+<td>Activity Data</td>
+</tr>
+<tr>
+<td>Activity</td>
+<td>Remove</td>
+<td>When an activity is removed</td>
+<td>Activity Data</td>
+</tr>
+<tr>
+<td>Product</td>
+<td>Creation</td>
+<td>When a new product is created</td>
+<td>Product Data</td>
+</tr>
+<tr>
+<td>Product</td>
+<td>Amendment</td>
+<td>When a product is changed</td>
+<td>Product Data</td>
+</tr>
+<tr>
+<td>Product</td>
+<td>Remove</td>
+<td>When a product is removed</td>
+<td>Product Data</td>
+</tr>
+</tbody></table>
+<h1 id='event-payloads'>Event Payloads</h1><h2 id='event-notification-payload'>Event Notification Payload</h2>
+<blockquote>
+<p>Example Event Notification Payload</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+</span><span class="s2">"eventNotificationCompanyName"</span><span class="p">:</span><span class="s2">""</span><span class="p">,</span><span class="w">
+</span><span class="s2">"eventNotificationCompanyIdentifier"</span><span class="p">:</span><span class="s2">""</span><span class="p">,</span><span class="w">
+</span><span class="s2">"eventNotificationGroupId"</span><span class="p">:</span><span class="s2">""</span><span class="p">,</span><span class="w">
+</span><span class="s2">"eventNotificationTypeId"</span><span class="p">:</span><span class="s2">""</span><span class="p">,</span><span class="w">
+</span><span class="s2">"eventNotificationId"</span><span class="p">:</span><span class="s2">""</span><span class="p">,</span><span class="w">
+</span><span class="s2">"eventNotificationName"</span><span class="p">:</span><span class="s2">""</span><span class="p">,</span><span class="w">
+</span><span class="s2">"eventNotificationDateTime"</span><span class="p">:</span><span class="s2">""</span><span class="p">,</span><span class="w">
+</span><span class="s2">"eventNotificationType"</span><span class="p">:</span><span class="s2">""</span><span class="p">,</span><span class="w">
+</span><span class="s2">"eventData"</span><span class="p">:{</span><span class="w"> </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+
+</span></code></pre>
+<p>Web-hook event payloads contain 2 broad sets of data:
+<br>
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;• Event Notification Payload – describes the type of notification, and when it occurred
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;• Event Data Payload – contains the event specific data
+Payloads describe the data that is delivered &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;to your URL, for each web-hook notification, based on your configuration.
+<br>
+<br>
+As part of every notification data payload that is sent, whether that is booking data, or customer data, our system will tell you which event triggered the delivery.</p>
+
+<table><thead>
+<tr>
+<th>Field</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>eventNotificationCompanyName</td>
+<td>String value describing the name of the company install</td>
+</tr>
+<tr>
+<td>eventNotificationCompanyUniqueIdentifier</td>
+<td>Hash value that describes a unique company install value</td>
+</tr>
+<tr>
+<td>EventNotificationGroupId</td>
+<td>The overall group for which this notification belongs. See the section that describes all possible event groups in the system</td>
+</tr>
+<tr>
+<td>EventNotificationTypeId</td>
+<td>The sub type classification within the even group. See the section that describes all possible groups and group types in the system</td>
+</tr>
+<tr>
+<td>EventNotificationId</td>
+<td>Contains a unique ID for the event as configured within Zaui</td>
+</tr>
+<tr>
+<td>EventNotificationName</td>
+<td>The name of the event as configured with in Zaui</td>
+</tr>
+<tr>
+<td>EventNotificationDateTime</td>
+<td>Date and time stamp of when the notification was generated and delivered</td>
+</tr>
+<tr>
+<td>EventNotificationType</td>
+<td>Type of notification</td>
+</tr>
+<tr>
+<td>EventData</td>
+<td>The event specific data payload</td>
+</tr>
+</tbody></table>
+<h2 id='booking-data-payload'>Booking Data Payload</h2>
+<blockquote>
+<p>Example of Delivered Payload</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="err"> </span><span class="s2">"eventNotificationId"</span><span class="p">:</span><span class="s2">"8"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"eventNotificationName"</span><span class="p">:</span><span class="s2">"on booking create"</span><span class="p">,</span><span class="w">
+  </span><span class="err"> </span><span class="s2">"eventNotificationType"</span><span class="p">:</span><span class="s2">"Booking Creation"</span><span class="p">,</span><span class="w">
+  </span><span class="err"> </span><span class="s2">"eventNotificationDateTime"</span><span class="p">:</span><span class="s2">"2016-04-26 16:53:15"</span><span class="p">,</span><span class="w">
+  </span><span class="err"> </span><span class="s2">"eventData"</span><span class="p">:{</span><span class="w">
+</span><span class="err"> </span><span class="w">       </span><span class="s2">"booking"</span><span class="p">:{</span><span class="w">
+</span><span class="err"> </span><span class="w">           </span><span class="s2">"bookingId"</span><span class="p">:</span><span class="s2">"353"</span><span class="p">,</span><span class="w">
+          </span><span class="s2">"bookingSaleDateTime"</span><span class="p">:</span><span class="s2">"2016-09-08 03:54:54"</span><span class="p">,</span><span class="w">
+          </span><span class="s2">"bookingCloseDateTime"</span><span class="p">:</span><span class="s2">"2016-10-20 23:59:59"</span><span class="p">,</span><span class="w">
+          </span><span class="s2">"bookingRevenue"</span><span class="p">:{</span><span class="w">
+                </span><span class="s2">"bookingSubTotal"</span><span class="p">:</span><span class="s2">"1090"</span><span class="p">,</span><span class="w">
+                </span><span class="s2">"bookingSubTotal_formated"</span><span class="p">:</span><span class="s2">"$1,090.00"</span><span class="p">,</span><span class="w">
+                </span><span class="s2">"bookingTax"</span><span class="p">:</span><span class="s2">"0"</span><span class="p">,</span><span class="w">
+                </span><span class="s2">"bookingTax_formated"</span><span class="p">:</span><span class="s2">"$0.00"</span><span class="p">,</span><span class="w">
+                </span><span class="s2">"bookingTotal"</span><span class="p">:</span><span class="s2">"1090"</span><span class="p">,</span><span class="w">
+                </span><span class="s2">"bookingTotal_formated"</span><span class="p">:</span><span class="s2">"$1,090.00"</span><span class="w">
+          </span><span class="p">},</span><span class="w">
+</span><span class="err"> </span><span class="w">         </span><span class="s2">"customers"</span><span class="p">:{</span><span class="w">
+</span><span class="err"> </span><span class="w">            </span><span class="s2">"customer"</span><span class="p">:[</span><span class="w">
+</span><span class="err"> </span><span class="w">                  </span><span class="p">{</span><span class="w">
+</span><span class="err"> </span><span class="w">                  </span><span class="s2">"customerId"</span><span class="p">:</span><span class="s2">"1101"</span><span class="p">,</span><span class="w">
+</span><span class="err"> </span><span class="w">                  </span><span class="s2">"firstName"</span><span class="p">:</span><span class="s2">"Cindy"</span><span class="p">,</span><span class="w">
+</span><span class="err"> </span><span class="w">                  </span><span class="s2">"lastName"</span><span class="p">:</span><span class="s2">"Smith"</span><span class="p">,</span><span class="w">
+</span><span class="err"> </span><span class="w">                  </span><span class="s2">"birthDate"</span><span class="p">:</span><span class="s2">"N</span><span class="se">\/</span><span class="s2">A"</span><span class="p">,</span><span class="w">
+</span><span class="err"> </span><span class="w">                  </span><span class="s2">"homePhone"</span><span class="p">:</span><span class="s2">"530"</span><span class="p">,</span><span class="w">
+</span><span class="err"> </span><span class="w">                  </span><span class="s2">"mobilePhone"</span><span class="p">:</span><span class="s2">"5305254274"</span><span class="p">,</span><span class="w">
+</span><span class="err"> </span><span class="w">                  </span><span class="s2">"email"</span><span class="p">:</span><span class="s2">"test@zaui.com"</span><span class="p">,</span><span class="w">
+</span><span class="err"> </span><span class="w">                  </span><span class="s2">"addressLine1"</span><span class="p">:</span><span class="s2">"PO Box 970"</span><span class="p">,</span><span class="w">
+</span><span class="err"> </span><span class="w">                  </span><span class="s2">"addressLine2"</span><span class="p">:{},</span><span class="w">
+</span><span class="err"> </span><span class="w">                  </span><span class="s2">"city"</span><span class="p">:</span><span class="s2">"Truckee"</span><span class="p">,</span><span class="w">
+</span><span class="err"> </span><span class="w">                  </span><span class="s2">"state"</span><span class="p">:</span><span class="s2">"CA"</span><span class="p">,</span><span class="w">
+</span><span class="err"> </span><span class="w">                  </span><span class="s2">"zipCode"</span><span class="p">:</span><span class="s2">"96162"</span><span class="p">,</span><span class="w">
+</span><span class="err"> </span><span class="w">                  </span><span class="s2">"country"</span><span class="p">:</span><span class="s2">"United States"</span><span class="p">,</span><span class="w">
+</span><span class="err"> </span><span class="w">                  </span><span class="s2">"username"</span><span class="p">:</span><span class="s2">"test@zaui.com"</span><span class="p">,</span><span class="w">
+</span><span class="err"> </span><span class="w">                  </span><span class="s2">"newsLetterOptIn"</span><span class="p">:</span><span class="s2">"false"</span><span class="p">,</span><span class="w">
+</span><span class="err"> </span><span class="w">                  </span><span class="s2">"loyaltyProgramOptIn"</span><span class="p">:</span><span class="s2">"false"</span><span class="p">,</span><span class="w">
+</span><span class="err"> </span><span class="w">                  </span><span class="s2">"allowsPrivateDataSharing"</span><span class="p">:</span><span class="s2">"true"</span><span class="w">                  </span><span class="err"> </span><span class="w">               
+                </span><span class="p">},</span><span class="w">
+              </span><span class="p">]</span><span class="w">            </span><span class="err"> </span><span class="w">         
+            </span><span class="p">},</span><span class="w">
+</span><span class="err"> </span><span class="w">         </span><span class="s2">"activities"</span><span class="p">:{</span><span class="w">
+</span><span class="err"> </span><span class="w">            </span><span class="s2">"activity"</span><span class="p">:[</span><span class="w">
+</span><span class="err"> </span><span class="w">                 </span><span class="p">{</span><span class="w">
+</span><span class="err"> </span><span class="w">                  </span><span class="s2">"activityId"</span><span class="p">:</span><span class="s2">"9"</span><span class="p">,</span><span class="w">
+</span><span class="err"> </span><span class="w">                  </span><span class="s2">"packageId"</span><span class="p">:</span><span class="s2">"0"</span><span class="p">,</span><span class="w">
+</span><span class="err"> </span><span class="w">                  </span><span class="s2">"activityName"</span><span class="p">:</span><span class="s2">"Hamilton to Raglan"</span><span class="p">,</span><span class="w">
+</span><span class="err"> </span><span class="w">                  </span><span class="s2">"activityDate"</span><span class="p">:</span><span class="s2">"Tuesday April 26 2016"</span><span class="p">,</span><span class="w">
+</span><span class="err"> </span><span class="w">                  </span><span class="s2">"activityTime"</span><span class="p">:</span><span class="s2">"00:00:00"</span><span class="p">,</span><span class="w">
+</span><span class="err"> </span><span class="w">                  </span><span class="s2">"activityType"</span><span class="p">:</span><span class="s2">"Rental"</span><span class="p">,</span><span class="w">
+</span><span class="err"> </span><span class="w">                  </span><span class="s2">"activityIsMultidayRental"</span><span class="p">:</span><span class="s2">"true"</span><span class="p">,</span><span class="w">
+</span><span class="err"> </span><span class="w">                  </span><span class="s2">"activityIsRental"</span><span class="p">:</span><span class="s2">"true"</span><span class="p">,</span><span class="w">
+</span><span class="err"> </span><span class="w">                  </span><span class="s2">"activityRentalDuration_Hours"</span><span class="p">:</span><span class="s2">"1"</span><span class="p">,</span><span class="w">
+</span><span class="err"> </span><span class="w">                  </span><span class="s2">"activityRentalStartDateTime"</span><span class="p">:</span><span class="s2">"2018-01-19 10:50:00"</span><span class="p">,</span><span class="w">
+</span><span class="err"> </span><span class="w">                  </span><span class="s2">"activityRentalEndDateTime"</span><span class="p">:</span><span class="s2">"2018-01-19 11:50:00"</span><span class="p">,</span><span class="w">
+</span><span class="err"> </span><span class="w">                  </span><span class="s2">"equipmentAssignmentId"</span><span class="p">:</span><span class="s2">"0"</span><span class="p">,</span><span class="w">
+</span><span class="err"> </span><span class="w">                  </span><span class="s2">"activityNotes"</span><span class="p">:</span><span class="s2">""</span><span class="p">,</span><span class="w">
+</span><span class="err"> </span><span class="w">                  </span><span class="s2">"activityStatus"</span><span class="p">:</span><span class="s2">"Active"</span><span class="p">,</span><span class="w">
+</span><span class="err"> </span><span class="w">                  </span><span class="s2">"activitySubTotal"</span><span class="p">:</span><span class="s2">"$0.00"</span><span class="p">,</span><span class="w">
+</span><span class="err"> </span><span class="w">                  </span><span class="s2">"activityTax"</span><span class="p">:</span><span class="s2">"$0.00"</span><span class="p">,</span><span class="w">
+</span><span class="err"> </span><span class="w">                  </span><span class="s2">"passengers"</span><span class="p">:{</span><span class="w">
+</span><span class="err"> </span><span class="w">                     </span><span class="s2">"seniors"</span><span class="p">:</span><span class="s2">"0"</span><span class="p">,</span><span class="w">
+</span><span class="err"> </span><span class="w">                     </span><span class="s2">"adults"</span><span class="p">:</span><span class="s2">"1"</span><span class="p">,</span><span class="w">
+</span><span class="err"> </span><span class="w">                     </span><span class="s2">"students"</span><span class="p">:</span><span class="s2">"0"</span><span class="p">,</span><span class="w">
+</span><span class="err"> </span><span class="w">                     </span><span class="s2">"children"</span><span class="p">:</span><span class="s2">"0"</span><span class="p">,</span><span class="w">
+</span><span class="err"> </span><span class="w">                     </span><span class="s2">"infants"</span><span class="p">:</span><span class="s2">"0"</span><span class="w">                     </span><span class="err"> </span><span class="w">                  
+                </span><span class="p">}</span><span class="w">                  </span><span class="err"> </span><span class="w">               
+              </span><span class="p">},</span><span class="w">
+            </span><span class="p">]</span><span class="w">            </span><span class="err"> </span><span class="w">         
+          </span><span class="p">},</span><span class="w">
+</span><span class="err"> </span><span class="w">      </span><span class="s2">"products"</span><span class="p">:{}</span><span class="w">         </span><span class="err"> </span><span class="w">      
+    </span><span class="p">}</span><span class="w">      </span><span class="err"> </span><span class="w">   
+  </span><span class="p">}</span><span class="w">   </span><span class="err"> </span><span class="w">
+</span><span class="p">}{</span><span class="w">
+</span><span class="err"> </span><span class="w">   </span><span class="s2">"eventNotificationId"</span><span class="p">:</span><span class="s2">"8"</span><span class="p">,</span><span class="w">
+</span><span class="err"> </span><span class="w">   </span><span class="s2">"eventNotificationName"</span><span class="p">:</span><span class="s2">"on booking create"</span><span class="p">,</span><span class="w">
+</span><span class="err"> </span><span class="w">   </span><span class="s2">"eventNotificationType"</span><span class="p">:</span><span class="s2">"Booking Creation"</span><span class="p">,</span><span class="w">
+</span><span class="err"> </span><span class="w">   </span><span class="s2">"eventNotificationDateTime"</span><span class="p">:</span><span class="s2">"2016-04-26 16:53:15"</span><span class="p">,</span><span class="w">
+</span><span class="err"> </span><span class="w">   </span><span class="s2">"eventData"</span><span class="p">:{</span><span class="w">
+</span><span class="err"> </span><span class="w">      </span><span class="s2">"booking"</span><span class="p">:{</span><span class="w">
+</span><span class="err"> </span><span class="w">        </span><span class="s2">"bookingId"</span><span class="p">:</span><span class="s2">"353"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"bookingSaleDateTime"</span><span class="p">:</span><span class="s2">"2016-09-08 03:54:54"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"bookingCloseDateTime"</span><span class="p">:</span><span class="s2">"2016-10-20 23:59:59"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"bookingRevenue"</span><span class="p">:{</span><span class="w">
+        </span><span class="s2">"bookingSubTotal"</span><span class="p">:</span><span class="s2">"1090"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"bookingSubTotal_formated"</span><span class="p">:</span><span class="s2">"$1,090.00"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"bookingTax"</span><span class="p">:</span><span class="s2">"0"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"bookingTax_formated"</span><span class="p">:</span><span class="s2">"$0.00"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"bookingTotal"</span><span class="p">:</span><span class="s2">"1090"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"bookingTotal_formated"</span><span class="p">:</span><span class="s2">"$1,090.00"</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+</span><span class="err"> </span><span class="w">         </span><span class="s2">"customers"</span><span class="p">:{</span><span class="w">
+</span><span class="err"> </span><span class="w">            </span><span class="s2">"customer"</span><span class="p">:[</span><span class="w">
+</span><span class="err"> </span><span class="w">                 </span><span class="p">{</span><span class="w">
+</span><span class="err"> </span><span class="w">                  </span><span class="s2">"customerId"</span><span class="p">:</span><span class="s2">"1101"</span><span class="p">,</span><span class="w">
+</span><span class="err"> </span><span class="w">                  </span><span class="s2">"firstName"</span><span class="p">:</span><span class="s2">"Cindy"</span><span class="p">,</span><span class="w">
+</span><span class="err"> </span><span class="w">                  </span><span class="s2">"lastName"</span><span class="p">:</span><span class="s2">"Smith"</span><span class="p">,</span><span class="w">
+</span><span class="err"> </span><span class="w">                  </span><span class="s2">"birthDate"</span><span class="p">:</span><span class="s2">"N</span><span class="se">\/</span><span class="s2">A"</span><span class="p">,</span><span class="w">
+</span><span class="err"> </span><span class="w">                  </span><span class="s2">"homePhone"</span><span class="p">:</span><span class="s2">"530"</span><span class="p">,</span><span class="w">
+</span><span class="err"> </span><span class="w">                  </span><span class="s2">"mobilePhone"</span><span class="p">:</span><span class="s2">"5305254274"</span><span class="p">,</span><span class="w">
+</span><span class="err"> </span><span class="w">                  </span><span class="s2">"email"</span><span class="p">:</span><span class="s2">"test@zaui.com"</span><span class="p">,</span><span class="w">
+</span><span class="err"> </span><span class="w">                  </span><span class="s2">"addressLine1"</span><span class="p">:</span><span class="s2">"PO Box 970"</span><span class="p">,</span><span class="w">
+</span><span class="err"> </span><span class="w">                  </span><span class="s2">"addressLine2"</span><span class="p">:{},</span><span class="w">
+</span><span class="err"> </span><span class="w">                  </span><span class="s2">"city"</span><span class="p">:</span><span class="s2">"Truckee"</span><span class="p">,</span><span class="w">
+</span><span class="err"> </span><span class="w">                  </span><span class="s2">"state"</span><span class="p">:</span><span class="s2">"CA"</span><span class="p">,</span><span class="w">
+</span><span class="err"> </span><span class="w">                  </span><span class="s2">"zipCode"</span><span class="p">:</span><span class="s2">"96162"</span><span class="p">,</span><span class="w">
+</span><span class="err"> </span><span class="w">                  </span><span class="s2">"country"</span><span class="p">:</span><span class="s2">"United States"</span><span class="p">,</span><span class="w">
+</span><span class="err"> </span><span class="w">                  </span><span class="s2">"username"</span><span class="p">:</span><span class="s2">"test@zaui.com"</span><span class="p">,</span><span class="w">
+</span><span class="err"> </span><span class="w">                  </span><span class="s2">"newsLetterOptIn"</span><span class="p">:</span><span class="s2">"false"</span><span class="p">,</span><span class="w">
+</span><span class="err"> </span><span class="w">                  </span><span class="s2">"loyaltyProgramOptIn"</span><span class="p">:</span><span class="s2">"false"</span><span class="p">,</span><span class="w">
+</span><span class="err"> </span><span class="w">                  </span><span class="s2">"allowsPrivateDataSharing"</span><span class="p">:</span><span class="s2">"true"</span><span class="w">                  </span><span class="err"> </span><span class="w">               
+                </span><span class="p">},</span><span class="w">
+              </span><span class="p">]</span><span class="w">            </span><span class="err"> </span><span class="w">         
+            </span><span class="p">},</span><span class="w">
+</span><span class="err"> </span><span class="w">         </span><span class="s2">"activities"</span><span class="p">:{</span><span class="w">
+</span><span class="err"> </span><span class="w">            </span><span class="s2">"activity"</span><span class="p">:[</span><span class="w">
+                </span><span class="p">{</span><span class="w">
+</span><span class="err"> </span><span class="w">                  </span><span class="s2">"activityId"</span><span class="p">:</span><span class="s2">"9"</span><span class="p">,</span><span class="w">
+</span><span class="err"> </span><span class="w">                  </span><span class="s2">"packageId"</span><span class="p">:</span><span class="s2">"0"</span><span class="p">,</span><span class="w">
+</span><span class="err"> </span><span class="w">                  </span><span class="s2">"activityName"</span><span class="p">:</span><span class="s2">"Hamilton to Raglan"</span><span class="p">,</span><span class="w">
+</span><span class="err"> </span><span class="w">                  </span><span class="s2">"activityDate"</span><span class="p">:</span><span class="s2">"Tuesday April 26 2016"</span><span class="p">,</span><span class="w">
+</span><span class="err"> </span><span class="w">                  </span><span class="s2">"activityTime"</span><span class="p">:</span><span class="s2">"00:00:00"</span><span class="p">,</span><span class="w">
+</span><span class="err"> </span><span class="w">                  </span><span class="s2">"activityType"</span><span class="p">:</span><span class="s2">"Rental"</span><span class="p">,</span><span class="w">
+</span><span class="err"> </span><span class="w">                  </span><span class="s2">"activityIsMultidayRental"</span><span class="p">:</span><span class="s2">"true"</span><span class="p">,</span><span class="w">
+</span><span class="err"> </span><span class="w">                  </span><span class="s2">"activityIsRental"</span><span class="p">:</span><span class="s2">"true"</span><span class="p">,</span><span class="w">
+</span><span class="err"> </span><span class="w">                  </span><span class="s2">"activityRentalDuration_Hours"</span><span class="p">:</span><span class="s2">"1"</span><span class="p">,</span><span class="w">
+</span><span class="err"> </span><span class="w">                  </span><span class="s2">"activityRentalStartDateTime"</span><span class="p">:</span><span class="s2">"2018-01-19 10:50:00"</span><span class="p">,</span><span class="w">
+</span><span class="err"> </span><span class="w">                  </span><span class="s2">"activityRentalEndDateTime"</span><span class="p">:</span><span class="s2">"2018-01-19 11:50:00"</span><span class="p">,</span><span class="w">
+</span><span class="err"> </span><span class="w">                  </span><span class="s2">"equipmentAssignmentId"</span><span class="p">:</span><span class="s2">"0"</span><span class="p">,</span><span class="w">
+</span><span class="err"> </span><span class="w">                  </span><span class="s2">"activityNotes"</span><span class="p">:</span><span class="s2">""</span><span class="p">,</span><span class="w">
+</span><span class="err"> </span><span class="w">                  </span><span class="s2">"activityStatus"</span><span class="p">:</span><span class="s2">"Active"</span><span class="p">,</span><span class="w">
+</span><span class="err"> </span><span class="w">                  </span><span class="s2">"activitySubTotal"</span><span class="p">:</span><span class="s2">"$0.00"</span><span class="p">,</span><span class="w">
+</span><span class="err"> </span><span class="w">                  </span><span class="s2">"activityTax"</span><span class="p">:</span><span class="s2">"$0.00"</span><span class="p">,</span><span class="w">
+</span><span class="err"> </span><span class="w">                  </span><span class="s2">"passengers"</span><span class="p">:{</span><span class="w">
+</span><span class="err"> </span><span class="w">                     </span><span class="s2">"seniors"</span><span class="p">:</span><span class="s2">"0"</span><span class="p">,</span><span class="w">
+</span><span class="err"> </span><span class="w">                     </span><span class="s2">"adults"</span><span class="p">:</span><span class="s2">"1"</span><span class="p">,</span><span class="w">
+</span><span class="err"> </span><span class="w">                     </span><span class="s2">"students"</span><span class="p">:</span><span class="s2">"0"</span><span class="p">,</span><span class="w">
+</span><span class="err"> </span><span class="w">                     </span><span class="s2">"children"</span><span class="p">:</span><span class="s2">"0"</span><span class="p">,</span><span class="w">
+</span><span class="err"> </span><span class="w">                     </span><span class="s2">"infants"</span><span class="p">:</span><span class="s2">"0"</span><span class="w">                     </span><span class="err"> </span><span class="w">                  
+                    </span><span class="p">}</span><span class="w">                  </span><span class="err"> </span><span class="w">               
+                  </span><span class="p">},</span><span class="w">
+                </span><span class="p">]</span><span class="w">            </span><span class="err"> </span><span class="w">         
+              </span><span class="p">},</span><span class="w">
+</span><span class="err"> </span><span class="w">         </span><span class="s2">"products"</span><span class="p">:{}</span><span class="w">         </span><span class="err"> </span><span class="w">      
+    </span><span class="p">}</span><span class="w">      </span><span class="err"> </span><span class="w">   
+  </span><span class="p">}</span><span class="w">   </span><span class="err"> </span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<p><strong>Event Category Trigger</strong>
+<br>
+• Booking
+<br>
+<strong>Event Trigger</strong>
+<br>
+• Create
+<br>
+• Edit
+<br>
+• Cancellation</p>
+<h2 id='customer-data-payload'>Customer Data Payload</h2>
+<blockquote>
+<p>Example Customer Data Payload</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="s2">"eventNotificationId"</span><span class="p">:</span><span class="s2">"7"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"eventNotificationName"</span><span class="p">:</span><span class="s2">"customer update"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"eventNotificationType"</span><span class="p">:</span><span class="s2">"Customer Amendment"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"eventNotificationDateTime"</span><span class="p">:</span><span class="s2">"2016-04-26 16:33:17"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"eventData"</span><span class="p">:{</span><span class="w">
+    </span><span class="s2">"customer"</span><span class="p">:{</span><span class="w"> </span><span class="s2">"customerId"</span><span class="p">:</span><span class="s2">"1099"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"firstName"</span><span class="p">:</span><span class="s2">"Wanna"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"lastName"</span><span class="p">:</span><span class="s2">"Bet"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"birthDate"</span><span class="p">:</span><span class="s2">"N</span><span class="se">\/</span><span class="s2">A"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"homePhone"</span><span class="p">:{</span><span class="w"> </span><span class="p">},</span><span class="w"> </span><span class="s2">"mobilePhone"</span><span class="p">:{</span><span class="w"> </span><span class="p">},</span><span class="w">
+      </span><span class="s2">"email"</span><span class="p">:</span><span class="s2">"wanna@zaui.com"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"addressLine1"</span><span class="p">:{</span><span class="w"> </span><span class="p">},</span><span class="w">
+      </span><span class="s2">"addressLine2"</span><span class="p">:{</span><span class="w"> </span><span class="p">},</span><span class="w">
+      </span><span class="s2">"city"</span><span class="p">:{</span><span class="w"> </span><span class="p">},</span><span class="w">
+      </span><span class="s2">"state"</span><span class="p">:{</span><span class="w"> </span><span class="p">},</span><span class="w">
+      </span><span class="s2">"zipCode"</span><span class="p">:{</span><span class="w"> </span><span class="p">},</span><span class="w">
+      </span><span class="s2">"country"</span><span class="p">:{</span><span class="w"> </span><span class="p">},</span><span class="w">
+      </span><span class="s2">"username"</span><span class="p">:</span><span class="s2">"wanna@zaui.com"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"newsLetterOptIn"</span><span class="p">:</span><span class="s2">"false"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"loyaltyProgramOptIn"</span><span class="p">:</span><span class="s2">"false"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"allowsPrivateDataSharing"</span><span class="p">:</span><span class="s2">"false"</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<p><strong>Event Category Trigger</strong>
+<br>
+• Customer
+<br>
+<strong>Event Trigger</strong>
+<br>
+• Create
+<br>
+• Edit
+<br>
+• Removal</p>
+<h2 id='account-data-payload'>Account Data Payload</h2>
+<blockquote>
+<p>Example Account Data Payload</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="s2">"eventNotificationId"</span><span class="p">:</span><span class="s2">"9"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"eventNotificationName"</span><span class="p">:</span><span class="s2">"Account has changed"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"eventNotificationType"</span><span class="p">:</span><span class="s2">"Account Amendment"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"eventNotificationDateTime"</span><span class="p">:</span><span class="s2">"2016-04-26 17:06:34"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"eventData"</span><span class="p">:{</span><span class="w">
+      </span><span class="s2">"account"</span><span class="p">:{</span><span class="w">
+          </span><span class="s2">"accountId"</span><span class="p">:</span><span class="s2">"703"</span><span class="p">,</span><span class="w">
+          </span><span class="s2">"accountName"</span><span class="p">:</span><span class="s2">"4 SightSeeing Information &amp; Bookings"</span><span class="p">,</span><span class="w">
+          </span><span class="s2">"accountGroupName"</span><span class="p">:</span><span class="s2">"4 SightSeeing Information &amp; Bookings"</span><span class="p">,</span><span class="w">
+          </span><span class="s2">"accountGroupId"</span><span class="p">:</span><span class="s2">"113"</span><span class="p">,</span><span class="w">
+          </span><span class="s2">"phone"</span><span class="p">:{</span><span class="w"> </span><span class="p">},</span><span class="w">
+          </span><span class="s2">"website"</span><span class="p">:</span><span class="s2">"www.zaui.com"</span><span class="p">,</span><span class="w">
+          </span><span class="s2">"fax"</span><span class="p">:{</span><span class="w"> </span><span class="p">},</span><span class="w">
+          </span><span class="s2">"otherPhone"</span><span class="p">:</span><span class="s2">"N</span><span class="se">\/</span><span class="s2">A"</span><span class="p">,</span><span class="w">
+          </span><span class="s2">"employees"</span><span class="p">:{</span><span class="w"> </span><span class="p">},</span><span class="w">
+          </span><span class="s2">"manager"</span><span class="p">:{</span><span class="w"> </span><span class="p">},</span><span class="w">
+          </span><span class="s2">"email"</span><span class="p">:</span><span class="s2">"accounts@zaui.com"</span><span class="p">,</span><span class="w">
+          </span><span class="s2">"businessNumber"</span><span class="p">:{</span><span class="w"> </span><span class="p">},</span><span class="w">
+          </span><span class="s2">"annaulRevenue"</span><span class="p">:{</span><span class="w"> </span><span class="p">},</span><span class="w">
+          </span><span class="s2">"industry"</span><span class="p">:</span><span class="s2">"NZ AGENT"</span><span class="p">,</span><span class="w">
+          </span><span class="s2">"accountType"</span><span class="p">:</span><span class="s2">"New Zealand"</span><span class="p">,</span><span class="w">
+          </span><span class="s2">"accountRateType"</span><span class="p">:</span><span class="s2">"Wholesale (Discount</span><span class="se">\/</span><span class="s2">Invoice)"</span><span class="p">,</span><span class="w">
+          </span><span class="s2">"primaryAddress"</span><span class="p">:</span><span class="s2">"12 Queen Street"</span><span class="p">,</span><span class="w">
+          </span><span class="s2">"primaryCity"</span><span class="p">:</span><span class="s2">"Auckland"</span><span class="p">,</span><span class="w">
+          </span><span class="s2">"primaryState"</span><span class="p">:{</span><span class="w"> </span><span class="p">},</span><span class="w">
+          </span><span class="s2">"primaryZip"</span><span class="p">:{</span><span class="w"> </span><span class="p">},</span><span class="w">
+          </span><span class="s2">"primaryCountry"</span><span class="p">:</span><span class="s2">"New Zealand"</span><span class="p">,</span><span class="w">
+          </span><span class="s2">"description"</span><span class="p">:</span><span class="s2">"This company is so much fun to work with."</span><span class="w">
+        </span><span class="p">}</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<p><strong>Event Category Trigger</strong>
+<br>
+• Account
+<br>
+<strong>Event Trigger</strong>
+<br>
+• Create
+<br>
+• Edit
+<br>
+• Removal</p>
+<h2 id='contact-data-payload'>Contact Data Payload</h2>
+<blockquote>
+<p>Example Contact Data Payload</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="s2">"eventNotificationId"</span><span class="p">:</span><span class="s2">"3"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"eventNotificationName"</span><span class="p">:</span><span class="s2">"A contact has been updated"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"eventNotificationType"</span><span class="p">:</span><span class="s2">"Contact Amendment"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"eventNotificationDateTime"</span><span class="p">:</span><span class="s2">"2016-04-26 17:08:43"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"eventData"</span><span class="p">:{</span><span class="w">
+        </span><span class="s2">"contact"</span><span class="p">:{</span><span class="w">
+            </span><span class="s2">"contactId"</span><span class="p">:</span><span class="s2">"575"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"accountId"</span><span class="p">:</span><span class="s2">"705"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"accountName"</span><span class="p">:</span><span class="s2">"Antipodes Voyages"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"department"</span><span class="p">:{</span><span class="w"> </span><span class="p">},</span><span class="w">
+            </span><span class="s2">"title"</span><span class="p">:{</span><span class="w"> </span><span class="p">},</span><span class="w">
+            </span><span class="s2">"officePhone"</span><span class="p">:</span><span class="s2">"6045669284"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"fax"</span><span class="p">:</span><span class="s2">"6045669284"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"firstName"</span><span class="p">:</span><span class="s2">"ANTIPODES Voyages"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"lastName"</span><span class="p">:{</span><span class="w"> </span><span class="p">},</span><span class="w"> </span><span class="s2">"birthDate"</span><span class="p">:</span><span class="s2">"N</span><span class="se">\/</span><span class="s2">A"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"homePhone"</span><span class="p">:</span><span class="s2">"6045669284"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"mobilePhone"</span><span class="p">:</span><span class="s2">"6045669284"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"email"</span><span class="p">:{</span><span class="w"> </span><span class="p">},</span><span class="w">
+            </span><span class="s2">"addressLine1"</span><span class="p">:</span><span class="s2">"607"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"addressLine2"</span><span class="p">:{</span><span class="w"> </span><span class="p">},</span><span class="w">
+            </span><span class="s2">"city"</span><span class="p">:</span><span class="s2">"Vancouver"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"state"</span><span class="p">:</span><span class="s2">"BRITISH COLUMBIA"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"zipCode"</span><span class="p">:</span><span class="s2">"V6B2V2"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"country"</span><span class="p">:</span><span class="s2">"Canada"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"username"</span><span class="p">:</span><span class="s2">"ANTVOY"</span><span class="w">
+        </span><span class="p">}</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<p><strong>Event Category Trigger</strong>
+<br>
+• Contact
+<br>
+<strong>Event Trigger</strong>
+<br>
+• Create
+<br>
+• Edit
+<br>
+• Removal</p>
+<h2 id='employee-data-payload'>Employee Data Payload</h2>
+<blockquote>
+<p>Example Employee Data Payload</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="s2">"eventNotificationId"</span><span class="p">:</span><span class="s2">"6"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"eventNotificationName"</span><span class="p">:</span><span class="s2">"update employee"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"eventNotificationType"</span><span class="p">:</span><span class="s2">"Employee Amendment"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"eventNotificationDateTime"</span><span class="p">:</span><span class="s2">"2016-04-26 16:12:48"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"eventData"</span><span class="p">:{</span><span class="w">
+    </span><span class="s2">"employee"</span><span class="p">:{</span><span class="w">
+        </span><span class="s2">"employeeId"</span><span class="p">:</span><span class="s2">"1098"</span><span class="p">,</span><span class="w"> </span><span class="s2">"employeeType"</span><span class="p">:</span><span class="s2">"Admin"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"accountId"</span><span class="p">:</span><span class="s2">"1"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"accountName"</span><span class="p">:</span><span class="s2">""</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"firstName"</span><span class="p">:</span><span class="s2">"Ben"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"lastName"</span><span class="p">:</span><span class="s2">"Wanterby"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"title"</span><span class="p">:</span><span class="s2">"A Driver"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"birthDate"</span><span class="p">:</span><span class="s2">"N</span><span class="se">\/</span><span class="s2">A"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"department"</span><span class="p">:</span><span class="s2">"Drivers"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"homePhone"</span><span class="p">:</span><span class="s2">"6045669284"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"mobilePhone"</span><span class="p">:</span><span class="s2">"6045669284"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"officePhone"</span><span class="p">:</span><span class="s2">"6045669284"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"fax"</span><span class="p">:</span><span class="s2">"6045669284"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"email"</span><span class="p">:</span><span class="s2">"help@zaui.com"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"addressLine1"</span><span class="p">:</span><span class="s2">"Suite 606 318 Homer Street"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"addressLine2"</span><span class="p">:{</span><span class="w"> </span><span class="p">},</span><span class="w">
+        </span><span class="s2">"city"</span><span class="p">:</span><span class="s2">"Vancouver"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"state"</span><span class="p">:</span><span class="s2">"British Columbia"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"zipCode"</span><span class="p">:</span><span class="s2">"V2B2V2"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"country"</span><span class="p">:</span><span class="s2">"Canada"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"username"</span><span class="p">:</span><span class="s2">"qwe"</span><span class="w">
+        </span><span class="p">}</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<p><strong>Event Category Trigger</strong>
+<br>
+• Employee
+<br>
+<strong>Event Trigger</strong>
+<br>
+• Create
+<br>
+• Edit
+<br>
+• Removal</p>
+<h2 id='guest-check-in-data-payload'>Guest Check-In Data Payload</h2>
+<blockquote>
+<p>Example Guest Check-In Data Payload</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="s2">"eventNotificationDateTime"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-11-19 8:54:38"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"eventNotificationGroupId"</span><span class="p">:</span><span class="w"> </span><span class="s2">"700"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"eventNotificationTypeId"</span><span class="p">:</span><span class="w"> </span><span class="s2">"700"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"eventNotificationId"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"eventNotificationIpAddress"</span><span class="p">:</span><span class="w"> </span><span class="s2">"174.6.183.62"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"eventNotificationName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Checkin"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"eventNotificationType"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Activity Check-in"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"eventData"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="s2">"checkinData"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"bookingId"</span><span class="p">:</span><span class="w"> </span><span class="s2">"140"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"checkedIn_activityDate"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-11-19"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"checkedIn_activityId"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"checkedIn_activityName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Waterfalls &amp; Canyons"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"checkedIn_activityTime"</span><span class="p">:</span><span class="w"> </span><span class="s2">"8:00 am"</span><span class="p">,</span><span class="w"> </span><span class="s2">"checkedIn_checkInCurrentStatus"</span><span class="p">:</span><span class="w"> </span><span class="s2">"true"</span><span class="p">,</span><span class="w"> </span><span class="s2">"checkedIn_guestId"</span><span class="p">:</span><span class="w"> </span><span class="s2">"97"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"checkedIn_message"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Checked-in the guest for Waterfalls &amp; Canyons on 2017-11-19 at 8:11:38"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"checkedIn_systemUsername"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Bob"</span><span class="w">
+        </span><span class="p">}</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<p><strong>Event Category Trigger</strong>
+<br>
+• Guest Check-In
+<br>
+<strong>Event Trigger</strong>
+<br>
+• On toggle of check-in status</p>
+<h2 id='package-data-payload'>Package Data Payload</h2>
+<blockquote>
+<p>Example Event Package Payload</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="s2">"eventNotificationGroupId"</span><span class="p">:</span><span class="w"> </span><span class="s2">"800"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"eventNotificationTypeId"</span><span class="p">:</span><span class="w"> </span><span class="s2">"800"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"eventNotificationDateTime"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-11-19 8:34:31"</span><span class="p">,</span><span class="w"> </span><span class="s2">"eventNotificationId"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"eventNotificationIpAddress"</span><span class="p">:</span><span class="w"> </span><span class="s2">"174.6.183.62"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"eventNotificationName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Package Create Notification"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"eventNotificationType"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Package Created"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"eventData"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="s2">"packageData"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="s2">"packageId"</span><span class="p">:</span><span class="w"> </span><span class="s2">"9"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"packageName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Ultimate Day Tour Package"</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<p><strong>Event Category Trigger</strong>
+<br>
+• Packages
+<br>
+<strong>Event Trigger</strong>
+<br>
+• Create
+<br>
+• Edit
+<br>
+• Removal</p>
+<h2 id='activity-data-payload'>Activity Data Payload</h2>
+<blockquote>
+<p>Example Activity Data Payload</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="s2">"eventNotificationGroupId"</span><span class="p">:</span><span class="w"> </span><span class="s2">"900"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"eventNotificationTypeId"</span><span class="p">:</span><span class="w"> </span><span class="s2">"900"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"eventNotificationDateTime"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-11-19 8:34:31"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"eventNotificationId"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"eventNotificationIpAddress"</span><span class="p">:</span><span class="w"> </span><span class="s2">"174.6.183.62"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"eventNotificationName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Activity Create Notification"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"eventNotificationType"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Activity Created"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"eventData"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="s2">"activityData"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"activityId"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1971"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"activityName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Brewery Tours PM"</span><span class="w">
+      </span><span class="p">}</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<p><strong>Event Category Trigger</strong>
+<br>
+• Activities
+<br>
+<strong>Event Trigger</strong>
+<br>
+• Create
+<br>
+• Edit
+<br>
+• Removal</p>
+<h2 id='product-data-payload'>Product Data Payload</h2>
+<blockquote>
+<p>Example Product Data Payload</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="s2">"eventNotificationGroupId"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1000"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"eventNotificationTypeId"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1000"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"eventNotificationDateTime"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-11-19 8:34:31"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"eventNotificationId"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"eventNotificationIpAddress"</span><span class="p">:</span><span class="w"> </span><span class="s2">"174.6.183.62"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"eventNotificationName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Product Create Notification"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"eventNotificationType"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Product Created"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"eventData"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="s2">"productData"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="s2">"productId"</span><span class="p">:</span><span class="w"> </span><span class="s2">"423"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"productName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Large Mens Zip Line T-Shirt"</span><span class="w">
+      </span><span class="p">}</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<p><strong>Event Category Trigger</strong>
+<br>
+• Products
+<br>
+<strong>Event Trigger</strong>
+<br>
+• Create
+<br>
+• Edit
+<br>
+• Removal</p>
+<h1 id='event-notification-groups-and-types'>Event Notification Groups and Types</h1>
+<table><thead>
+<tr>
+<th>Event Group</th>
+<th>Group ID</th>
+<th>Event Type</th>
+<th>Type ID</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Bookings</td>
+<td>100</td>
+<td>Create</td>
+<td>100</td>
+</tr>
+<tr>
+<td>Bookings</td>
+<td>100</td>
+<td>Update</td>
+<td>101</td>
+</tr>
+<tr>
+<td>Bookings</td>
+<td>100</td>
+<td>Remove</td>
+<td>102</td>
+</tr>
+<tr>
+<td>Customers</td>
+<td>200</td>
+<td>Create</td>
+<td>200</td>
+</tr>
+<tr>
+<td>Customers</td>
+<td>200</td>
+<td>Update</td>
+<td>201</td>
+</tr>
+<tr>
+<td>Customers</td>
+<td>200</td>
+<td>Remove</td>
+<td>202</td>
+</tr>
+<tr>
+<td>Accounts</td>
+<td>300</td>
+<td>Create</td>
+<td>300</td>
+</tr>
+<tr>
+<td>Accounts</td>
+<td>300</td>
+<td>Update</td>
+<td>301</td>
+</tr>
+<tr>
+<td>Accounts</td>
+<td>300</td>
+<td>Remove</td>
+<td>302</td>
+</tr>
+<tr>
+<td>Contacts</td>
+<td>400</td>
+<td>Create</td>
+<td>400</td>
+</tr>
+<tr>
+<td>Contacts</td>
+<td>400</td>
+<td>Update</td>
+<td>401</td>
+</tr>
+<tr>
+<td>Contacts</td>
+<td>400</td>
+<td>Remove</td>
+<td>402</td>
+</tr>
+<tr>
+<td>Employees</td>
+<td>500</td>
+<td>Create</td>
+<td>500</td>
+</tr>
+<tr>
+<td>Employees</td>
+<td>500</td>
+<td>Update</td>
+<td>501</td>
+</tr>
+<tr>
+<td>Employees</td>
+<td>500</td>
+<td>Remove</td>
+<td>502</td>
+</tr>
+<tr>
+<td>Check-In</td>
+<td>700</td>
+<td>Toggle Status</td>
+<td>700</td>
+</tr>
+<tr>
+<td>Packages</td>
+<td>800</td>
+<td>Update</td>
+<td>801</td>
+</tr>
+<tr>
+<td>Packages</td>
+<td>800</td>
+<td>Update</td>
+<td>801</td>
+</tr>
+<tr>
+<td>Packages</td>
+<td>800</td>
+<td>Remove</td>
+<td>802</td>
+</tr>
+<tr>
+<td>Activities</td>
+<td>900</td>
+<td>Create</td>
+<td>900</td>
+</tr>
+<tr>
+<td>Activities</td>
+<td>900</td>
+<td>Update</td>
+<td>901</td>
+</tr>
+<tr>
+<td>Activities</td>
+<td>900</td>
+<td>Remove</td>
+<td>902</td>
+</tr>
+<tr>
+<td>Products</td>
+<td>1000</td>
+<td>Create</td>
+<td>1000</td>
+</tr>
+<tr>
+<td>Products</td>
+<td>1000</td>
+<td>Update</td>
+<td>1001</td>
+</tr>
+<tr>
+<td>Products</td>
+<td>1000</td>
+<td>Remove</td>
+<td>1002</td>
+</tr>
+</tbody></table>
+<h1 id='legal'>Legal</h1>
+<p>The Zaui Web-Hook and Remote Target API (the “API”) is owned and operated by Zaui Software. If you use the API, you will be able to access data from any partner Supplier within the Zaui system. Listed below are the terms and conditions of use (the “Terms”) for this API. By using, accessing and/or viewing information on the API, you agree to be bound by these Terms. If you violate these Terms, Zaui Software has the right to terminate your use of the API and/or take appropriate legal actions against you. We reserve the right to change these Terms at any time without notice.</p>
+<h2 id='acceptance-of-terms'>Acceptance of Terms</h2>
+<p>In order to use the API you must agree to these Terms. You represent that you have the full power, capacity and authority to accept these Terms. If you are accepting on behalf of a business entity, you represent that you have the full legal authority to bind the business entity to these Terms. These terms are in addition to the standard Zaui Software Terms of Service.</p>
+<h2 id='permitted-use'>Permitted Use</h2>
+<p>You may access, view and make copies of the data in the API for your personal or commercial use. Due to the special features of API, by accessing and viewing information from API you agree to be bound by these special terms:</p>
+
+<ol>
+<li>You will not modify the data from API in any way</li>
+<li>You will not modify the link structure to API</li>
+</ol>
+<h3 id='subject-to-these-terms-zaui-software-gives-you-a-personal-worldwide-non-assignable-and-non-exclusive-license-to-the-api'>Subject to these Terms, Zaui Software gives you a personal, worldwide, non-assignable and non-exclusive license to the API.</h3><h2 id='restrictions'>Restrictions</h2>
+<p>You may not:</p>
+
+<ol>
+<li>Display the API in any manner that implies a relationship or affiliation with, sponsorship, or endorsement by Zaui or that can be reasonably interpret to suggest content represents the views or opinions of Zaui.</li>
+<li>Use the API to disparage Zaui or its products, partners or product suppliers.</li>
+<li>Use the API on your website if the website promotes illegal activity, contains pornography, gambling, or the sale of tobacco or alcohol to individuals under the age of legal consumption.</li>
+<li>Delete or alter any trade names, trademarks, service marks, logos, domain names or other distinctive brand features of Zaui that are included in the API in applications or programs that you create.</li>
+<li>Reverse engineer, decompile or otherwise attempt to extract the source code of the API or any part thereof, unless this is expressly permitted or required by applicable law.</li>
+<li>Access, tamper with, or use non-public areas of the Services, Zaui computer systems, or the technical delivery systems of Zaui providers; (ii) probe, scan, or test the vulnerability of any system or network or breach or circumvent any security or authentication measures.</li>
+<li>Access or search or attempt to access or search the Services by any means (automated or otherwise) other than through our currently available, published interfaces that are provided by Zaui, unless you have been specifically allowed to do so in a separate agreement with Zaui.</li>
+<li>Forge any TCP/IP packet header or any part of the header information in any email or posting, or in any way use the Services to send altered, deceptive or false source-identifying information.</li>
+<li>Interfere with, or disrupt, (or attempt to do so), the access of any user, host or network, including, without limitation, sending a virus, overloading, flooding, spamming, mail-bombing the Services, or by scripting the creation of Content in such a manner as to interfere with or create an undue burden on the Services.</li>
+</ol>
+<h2 id='rate-limits-and-monitoring'>Rate Limits and Monitoring</h2>
+<p>Your use of the Zaui WebHooks and Zaui Content are subject to certain limitations on access, calls, and use as determined by Zaui, at its sole discretion. If Zaui believes that you have attempted to exceed or circumvent these limitations, your ability to use the Zaui WebHooks and ZContent may be temporarily or permanently blocked. Zaui may monitor your use of the Zaui API to improve the Zaui service and to ensure your compliance with these Terms.</p>
+<h2 id='ownership-trademarks'>Ownership/Trademarks</h2>
+<p>You do not acquire or have any ownership, license or other proprietary interest in the API. You understand that the API is protected by copyrights, trademarks, service marks, patents and other proprietary rights and laws.</p>
+<h2 id='privacy-policy'>Privacy Policy</h2>
+<p>The use of personal information is governed by our <a href="https://www.zaui.com/privacy" target="_blank"_>Privacy Policy</a> and the <a href="https://www.zaui.com/terms-of-service/" target="_blank"_>Zaui Terms of Service</a>.</p>
+<h2 id='limitation-of-liability'>Limitation of Liability</h2>
+<p>Zaui assumes no responsibility for, and shall not be liable for, any damages or expenses you may incur as a result of any inaccuracy, incompleteness or obsolescence of anything contained in the API. THE SERVICES OF THE API ARE PROVIDED “AS IS”, WITH NO WARRANTIES WHATSOEVER. Without limiting the generality of the forgoing, you agree that neither Zaui nor any of its affiliates, employees or agents will be liable to you or to any other party for any direct or indirect damages, or for any special, exemplary, punitive, incidental, consequential or other damages (including, but not limited to, lost profits or lost time), whether based on contract, tort, strict liability or otherwise, which arise out of or are in any way connected with any access to the API or any viewing or use of any information on the API. You acknowledge that the limitations in this Section are reasonable and appropriate. Zaui DISCLAIMS ALL WARRANTIES REGARDING THE ACCURACY, COMPLETENESS, CURRENCY OR RELIABILITY OF THE DATA IN THE API, INCLUDING, WITHOUT LIMITATION, ANY IMPLIED WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, NON-INFRINGEMENT OR OTHERWISE ARISING BY LAW OR STATUTE. YOU AGREE THAT YOUR USE OF, OR RELIANCE UPON, ALL DATA OBTAINED THROUGH THE API IS AT YOUR OWN DISCRETION AND RISK.</p>
+<h2 id='unauthorized-use-no-interference'>Unauthorized Use/No Interference</h2>
+<p>You agree that you will not use or attempt to use any method, device, software or routine to harm others or interfere with functioning of the API or use and/or monitor any information in or related to the API for any unauthorized purpose.</p>
+
+<p>By using the API in applications or programs you create, you agree to be solely liable for any damage resulting from any infringement of copyrights, proprietary rights, or any other harm (including but not limited to harm caused by spyware, malware, worms, Trojan horses and viruses) resulting from such application or program.</p>
+<h2 id='indemnification'>Indemnification</h2>
+<p>You agree to indemnify and to hold Zaui, its subsidiaries, affiliates, business partners, officers, employers and other agents, harmless from and against any loss, liability, damage or expense (including reasonable attorneys fees) arising out of your use of the API, including, without limitation, any violations by you of these Terms.</p>
+<h2 id='termination'>Termination</h2>
+<p>Without limiting its other remedies, Zaui may immediately discontinue, suspend, terminate or block your and any user’s use of the API at any time in its sole discretion. You may terminate this agreement by ceasing to use the API or any product incorporating it.</p>
+
+<p>Zaui may in its sole discretion choose to upgrade the current version of the API at any time without notice to you, which may make the version of the API that you are using obsolete.</p>
+<h2 id='accuracy-of-information'>Accuracy of Information</h2>
+<p>ALL INFORMATION IN THE API IS PROVIDED TO YOU ON AN “AS-IS” BASIS. ZAUI SOFTWARE DISCLAIMS ALL WARRANTIES REGARDING THE ACCURACY, COMPLETENESS, CURRENCY OR RELIABILITY OF ANY INFORMATION IN THE API, INCLUDING, WITHOUT LIMITATION, ANY IMPLIED WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, NON-INFRINGEMENT OR OTHERWISE ARISING BY LAW OR STATUTE.</p>
+<h2 id='transmission-failures'>Transmission Failures</h2>
+<p>Zaui will use commercially reasonable efforts to publish and transmit the API on a continuous and timely basis. Zaui is not, however, responsible for any failure or malfunction in communications; for any failure or refusal of any third party transmission intermediaries to transmit any API; or for the failure to transmit any API resulting from any natural disasters, wars, labor strike or other events beyond the control of Zaui.</p>
+<h2 id='limitation-of-liability-2'>Limitation of Liability</h2>
+<p>You acknowledge that, Zaui cannot and does not assume any responsibility for, and shall not be liable for, any damages or expenses you may incur as a result of any inaccuracy, incompleteness or obsolescence of any information contained in the API. You agree that Zaui will not be liable to you or to any other party for any direct or indirect damages, or for any special, exemplary, punitive, incidental, consequential or other damages (including, but not limited to, lost profits or lost time), whether based on contract, tort, strict liability or otherwise, which arise out of or are in any way connected with any access to the API or any contractual or other dealings or relationships you may have with third parties based upon any information included in the Zaui.</p>
+<h2 id='governing-law-jurisdiction'>Governing law/Jurisdiction</h2>
+<p>These terms and conditions and your access to and use of information from the API are governed by the laws of the Province of British Columbia. In the event of any dispute regarding the interpretation or compliance with these terms and conditions, you consent to the exclusive jurisdiction of the Provincial and Federal courts located in British Columbia.</p>
+<h2 id='entire-agreement'>Entire Agreement</h2>
+<p>These terms and conditions of use for this API constitute the entire agreement between you and Zaui regarding your access to the API and your reproduction and use of any information in the API. Any waiver of any term or condition shall not be effective unless in a written document signed by an authorized representative of Zaui.</p>
+
+      </div>
+      <div class="dark-box">
+          <div class="lang-selector">
+                <a href="#" data-language-name="json">json</a>
+          </div>
+      </div>
+    </div>
+  </body>
 </html>
