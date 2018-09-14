@@ -5,11 +5,6 @@ phases:
     commands:
       - echo Removing the Original WebPage Directory
       - rm -r webpage
-      - curl -O http://production.cf.rubygems.org/rubygems/rubygems-1.8.10.tgz
-      - tar zxf rubygems-1.8.10.tgz
-      - cd rubygems-1.8.10
-      - ruby setup.rb --no-format-executable
-      - gem update --system 1.8.25
       - gem install rake
     finally:
       - echo WebPage Directory Removed
