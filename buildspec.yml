@@ -5,6 +5,7 @@ phases:
     commands:
       - echo Removing the Original WebPage Directory
       - rm -r webpage
+      - npm install ruby --save
       - gem install rake
     finally:
       - echo WebPage Directory Removed
